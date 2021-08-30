@@ -764,14 +764,14 @@ def install_rtsp():
     mappings = {
         "armv7l": "armv7",
         "armv6l": "armv6",
-        "aarch64": "armv64"
+        "aarch64": "arm64v8"
     }
     if lscpu["architecture"] not in mappings:
         # Old mapping style for safety
         mappings = {
             "armv7l": "arm7",
             "armv6l": "arm6",
-            "aarch64": "arm64"
+            "aarch64": "arm64v8"
         }
         if lscpu["architecture"] not in mappings:
             raise Exception(f"Don't know the arch {lscpu['architecture']}")
